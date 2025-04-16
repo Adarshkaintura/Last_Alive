@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('/images/___s.jpg') no-repeat center center fixed;
+    background-size: cover; */
+    background-color: rgba(190, 187, 187, 0.7); /* fallback background color */
+
+    color: white;
+}
+#bgVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -1;
+    object-fit: cover;
+    opacity: 0.3; /* Optional: for darkening, or adjust this */
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(77, 68, 255); /* fallback */
+    background: linear-gradient(to right, rgb(35, 24, 246), indigo);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    transition: text-shadow 0.3s ease;
+}
+.title:hover {
+    text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.9);
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1600px; /* Increase layout width */
+    margin: 0 auto;
+}
+
+.video-card {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.video-card:hover {
+    transform: scale(1.03);
+}
+
+.video-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.video-card p {
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.05rem;
+    text-align: center;
+    height: 120px;
+    overflow-y: auto;
+    color: #a5d8ff;
+    background: linear-gradient(to right, #001f3f, #0074d9);
+    border-top: 1px solid #0074d9;
+}
+
+.video-card p::-webkit-scrollbar {
+    width: 5px;
+}
+
+.video-card p::-webkit-scrollbar-thumb {
+    background: #0074d9;
+    border-radius: 10px;
+}
+
+/* Tablet screens */
+@media (min-width: 768px) {
+    .videos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+    .videos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large Desktop screens */
+@media (min-width: 1440px) {
+    .videos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .video-card img {
+        height: 220px;
+    }
+
+    .video-card p {
+        height: 130px;
+        font-size: 1.1rem;
+    }
+}
