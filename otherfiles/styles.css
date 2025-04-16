@@ -116,3 +116,161 @@ header {
         font-size: 1.1rem;
     }
 }
+ 
+  /* === Container === */
+  .container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  /* === Channel Info Section === */
+  .channel-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .channel-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #ff0000;
+    box-shadow: 0 0 15px #ff0000aa;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .channel-logo:hover {
+    transform: scale(1.05);
+  }
+  
+  #subscriberCount {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ff4b4b;
+  }
+  
+  /* === Sections: Videos & Comments === */
+  .videos-section,
+  .comments-section {
+    margin-top: 40px;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+  }
+  
+  .videos-section h2,
+  .comments-section h2 {
+    margin-bottom: 20px;
+    color: #ffcc00;
+  }
+  
+  /* === List Reset === */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* === General List Items (used for comments) === */
+  li {
+    background-color: #2a2a2a;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 700px;
+    color: #ddd;
+    transition: background 0.3s ease;
+  }
+  
+  li:hover {
+    background-color: #3a3a3a;
+  }
+  
+  /* === Video List Items === */
+  .video-list li {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 700px;
+    color: #ddd;
+    transition: background 0.3s ease;
+    gap: 15px;
+    text-align: left;
+  }
+  
+  .video-list li:hover {
+    background-color: #3a3a3a;
+  }
+  
+  .video-thumbnail {
+    width: 120px;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+  }
+  
+  .video-thumbnail:hover {
+    transform: scale(1.05);
+  }
+  
+  .video-info {
+    flex: 1;
+  }
+  
+  .video-title {
+    font-weight: bold;
+    font-size: 1em;
+    color: #ffcc00;
+    text-decoration: none;
+  }
+  
+  .video-title:hover {
+    text-decoration: underline;
+    color: #ffd700;
+  }
+  
+  .video-stats {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-top: 5px;
+  }
+  
+  /* === Responsive Design === */
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .channel-logo {
+      width: 80px;
+      height: 80px;
+    }
+  
+    #subscriberCount {
+      font-size: 1.8em;
+    }
+  
+    li {
+      font-size: 0.95em;
+    }
+  
+    .video-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .video-thumbnail {
+      width: 100%;
+    }
+  
+    .video-stats {
+      font-size: 0.85em;
+    }
+  }
+  
